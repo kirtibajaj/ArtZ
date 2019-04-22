@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+    android:orientation="vertical"
+        android:padding="20dp"
+        android:background="#fff">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textSettings"
+            android:text="  Account Settings"
+            android:textSize="35dp"
+            android:textColor="#000"
+            android:layout_marginLeft="4dp"
+            android:background="@drawable/grey_border_button"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/add_list_account_setting_edit_profile"
+        android:textSize="20dp"
+        android:text="Edit Profile"
+        android:layout_marginTop="35dp"
+        android:textStyle="italic"
+        android:layout_marginLeft="30dp"
+        android:textColor="#B2B9C4"
+        android:background="@drawable/greyborderlist"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/add_list_account_setting_log_out"
+        android:textSize="20dp"
+        android:text="LogOut"
+        android:textStyle="italic"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginLeft="30dp"
+        android:textColor="#B2B9C4"
+        android:background="@drawable/greyborderlist"/>
+</LinearLayout>

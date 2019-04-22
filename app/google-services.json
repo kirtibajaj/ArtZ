@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1048044502198",
+    "firebase_url": "https://artz-4d630.firebaseio.com",
+    "project_id": "artz-4d630",
+    "storage_bucket": "artz-4d630.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048044502198:android:ffd0fdb367729c46",
+        "android_client_info": {
+          "package_name": "com.example.mypc.artz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1048044502198-p7j4r7ts6igu6733i24oiuliavq5pel1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvcRar3a814VIRrILgjlgNtAb_oA9jFU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1048044502198-p7j4r7ts6igu6733i24oiuliavq5pel1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
