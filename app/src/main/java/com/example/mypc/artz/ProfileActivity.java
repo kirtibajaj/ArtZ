@@ -17,6 +17,7 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
@@ -37,14 +38,27 @@ public class ProfileActivity extends AppCompatActivity {
         setupActivityWidget();
          setupProfilePhoto();
        // viewImageGrid();
+        setupImageGrid();
+        TextView textView=(TextView)findViewById(R.id.textEditProfile);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProfileActivity.this,Edit_profile.class));
+            }
+        });
     }
-    private void setupImageGrid(ArrayList<String> ImgURL)
+    private void setupImageGrid()
     {
         GridView gridView=(GridView)findViewById(R.id.gridView);
+        gridView.setAdapter(new ImageAdapterGridView(this));
     gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent,
                                     View v, int position, long id) {
-                Toast.makeText(getBaseContext(), "Grid Item " + (position + 1) + " Selected", Toast.LENGTH_LONG).show();
+                String message=Integer.toString(imgids[position]);
+                Intent intent=new Intent(ProfileActivity.this,SinglePostView.class);
+                intent.putExtra("message", message);
+                startActivity(intent);
+                Toast.makeText(getBaseContext(), "Item " + (position + 1) + " Selected", Toast.LENGTH_LONG).show();
             }
         });
         //GridImageAdapter adapter=new GridImageAdapter(mContext,R.layout.layout_grid_imageview,"",ImgURL);
@@ -94,9 +108,9 @@ public class ImageAdapterGridView extends BaseAdapter {
         ImageView mImageView;
         if (convertView == null) {
             mImageView = new ImageView(mContext);
-            //mImageView.setLayoutParams(new GridView.LayoutParams(130, 130));
-            //mImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            //mImageView.setPadding(16, 16, 16, 16);
+            mImageView.setLayoutParams(new GridView.LayoutParams(330, 330));
+           mImageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+         //   mImageView.setPadding(16, 16, 16, 16);
         } else {
             mImageView = (ImageView) convertView;
         }

@@ -27,35 +27,38 @@
         </activity>
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait"/>
-        <activity
             android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".SignUPActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ShareActivity" />
         <activity
-            android:screenOrientation="portrait"
             android:name=".ProfileActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:screenOrientation="portrait"
             android:name=".ActivityAccountSetting"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:screenOrientation="portrait"
             android:name=".Edit_profile"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:screenOrientation="portrait"
             android:name=".NextActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Notifications"
+        <activity
+            android:name=".Notifications"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".CartActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CartActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SinglePostView"></activity>
     </application>
 
 </manifest>

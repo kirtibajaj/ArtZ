@@ -76,12 +76,12 @@ private void checkCurrentUser(FirebaseUser user)
         };
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        mauth.addAuthStateListener(mauthlistener);
-       checkCurrentUser(mauth.getCurrentUser());
-    }
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        mauth.addAuthStateListener(mauthlistener);
+//       checkCurrentUser(mauth.getCurrentUser());
+//    }
 
     @Override
     public void onStop() {
@@ -108,7 +108,6 @@ private void checkCurrentUser(FirebaseUser user)
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.main_frame,fragment);
         fragmentTransaction.commit();
-
     }
     public void seeNotifications(View v){
         Intent intent=new Intent(HomeActivity.this,Notifications.class);
