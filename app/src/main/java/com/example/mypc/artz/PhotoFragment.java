@@ -35,26 +35,23 @@ public class PhotoFragment extends Fragment {
         });
         return view;
     }
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if(requestCode == CAMERA_REQUEST_CODE){
-//            Log.d(TAG, "onActivityResult: done taking a photo.");
-//            Log.d(TAG, "onActivityResult: attempting to navigate to final share screen.");
-//
-//            Bitmap bitmap;
-//            bitmap = (Bitmap) data.getExtras().get("data");
-//
-//            if(isRootTask()){
-//                try{
-//                    Log.d(TAG, "onActivityResult: received new bitmap from camera: " + bitmap);
-//                    Intent intent = new Intent(getActivity(), NextActivity.class);
-//                    intent.putExtra(getString(R.string.selected_bitmap), bitmap);
-//                    startActivity(intent);
-//                }catch (NullPointerException e){
-//                    Log.d(TAG, "onActivityResult: NullPointerException: " + e.getMessage());
-//                }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == CAMERA_REQUEST_CODE){
+            Bitmap bitmap;
+            bitmap = (Bitmap) data.getExtras().get("data");
+
+          //  if(isRootTask()){
+            //    try{
+              //      Log.d(TAG, "onActivityResult: received new bitmap from camera: " + bitmap);
+                    Intent intent = new Intent(getActivity(), NextActivity.class);
+                    intent.putExtra("selected_Bitmap", bitmap);
+                    startActivity(intent);
+                //}catch (NullPointerException e){
+                 //   Log.d(TAG, "onActivityResult: NullPointerException: " + e.getMessage());
+                //}
 //            }else{
 //                try{
 //                    Log.d(TAG, "onActivityResult: received new bitmap from camera: " + bitmap);
@@ -67,7 +64,7 @@ public class PhotoFragment extends Fragment {
 //                    Log.d(TAG, "onActivityResult: NullPointerException: " + e.getMessage());
 //                }
 //            }
-//
-//        }
- //   }
+
+        }
+    }
 }

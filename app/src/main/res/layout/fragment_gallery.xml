@@ -29,7 +29,7 @@
                 android:scaleType="centerCrop"
                 android:layout_alignParentLeft="true" />
         </RelativeLayout>
-        <GridView
+        <android.support.v7.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="40"
@@ -40,6 +40,6 @@
             android:stretchMode="none"
             android:gravity="center"
             android:layout_marginTop="1dp">
-        </GridView>
+        </android.support.v7.widget.RecyclerView>
     </LinearLayout>
 </RelativeLayout>

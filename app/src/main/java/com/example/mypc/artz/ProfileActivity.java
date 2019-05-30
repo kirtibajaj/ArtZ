@@ -29,11 +29,17 @@ public class ProfileActivity extends AppCompatActivity {
     private Context mContext=ProfileActivity.this;
     private ImageView profilephoto;
     Integer[] imgids={R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e, R.drawable.f, R.drawable.g};
+    String[] price={"1200/-","200/-","1600/-","345/-","220/-","640/-","449/-"};
+ Integer[] Likes={4,12,3,16,9,8,11};
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        TextView desc=(TextView)findViewById(R.id.description_profile);
+        TextView user=(TextView)findViewById(R.id.username_profile);
+        TextView display=(TextView)findViewById(R.id.display_name_profile);
+        TextView website=(TextView)findViewById(R.id.website_profile);
         setUpToolbar();
         setupActivityWidget();
          setupProfilePhoto();
@@ -54,9 +60,13 @@ public class ProfileActivity extends AppCompatActivity {
     gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent,
                                     View v, int position, long id) {
-                String message=Integer.toString(imgids[position]);
+                final String image_post=Integer.toString(imgids[position]);
+                final String price_post=price[position];
+                final String likes_post=Integer.toString(Likes[position]);
                 Intent intent=new Intent(ProfileActivity.this,SinglePostView.class);
-                intent.putExtra("message", message);
+                intent.putExtra("image",image_post);
+                intent.putExtra("price",price_post);
+                intent.putExtra("likes",likes_post);
                 startActivity(intent);
                 Toast.makeText(getBaseContext(), "Item " + (position + 1) + " Selected", Toast.LENGTH_LONG).show();
             }
@@ -118,4 +128,8 @@ public class ImageAdapterGridView extends BaseAdapter {
         return mImageView;
     }
 }
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(ProfileActivity.this,HomeActivity.class));
+    }
 }

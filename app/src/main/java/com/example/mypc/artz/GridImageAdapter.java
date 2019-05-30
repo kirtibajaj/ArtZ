@@ -44,12 +44,16 @@ public class GridImageAdapter extends ArrayAdapter<String> {
             holder = new ViewHolder();
             holder.image = (ImageView) convertView.findViewById(R.id.gridImageView);
             convertView.setTag(holder);}
-        else{
+        else {
             holder = (ViewHolder) convertView.getTag();
         }
         String imgURL = getItem(position);
-        imgURL="file:/"+imgURL;
-        Picasso.get().load(imgURL).into(holder.image);
+
+        Picasso.get().load(mAppend +imgURL).into(holder.image);
+
+
+        //imgURL="file:/"+imgURL;
+        //Picasso.get().load(imgURL).into(holder.image);
         return convertView;
     }
 }

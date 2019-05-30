@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
          });
     }
         private void userLogin() {
-        String email = editTextemail.getText().toString().trim();
+        final String email = editTextemail.getText().toString().trim();
         String password = editTextpassword.getText().toString().trim();
         if (TextUtils.isEmpty(email)) {
             //email is empty
@@ -76,7 +76,9 @@ public class LoginActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Progressbar.dismiss();
-                    startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+                    Intent intent=new Intent(LoginActivity.this,HomeActivity.class);
+                    intent.putExtra("email",email);
+                    startActivity(intent);
                 }
                 else
                 {
@@ -87,5 +89,8 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(LoginActivity.this,LoginActivity.class));
     }
+}

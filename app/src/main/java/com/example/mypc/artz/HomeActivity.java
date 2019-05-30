@@ -76,12 +76,12 @@ private void checkCurrentUser(FirebaseUser user)
         };
     }
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        mauth.addAuthStateListener(mauthlistener);
-//       checkCurrentUser(mauth.getCurrentUser());
-//    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        mauth.addAuthStateListener(mauthlistener);
+       checkCurrentUser(mauth.getCurrentUser());
+    }
 
     @Override
     public void onStop() {
@@ -100,6 +100,8 @@ private void checkCurrentUser(FirebaseUser user)
         setSupportActionBar(myToolbar);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        final HomeFragment homeFragment=new HomeFragment();
+        setfragment(homeFragment);
         setUpFirebaseAuth();
     }
     private void setfragment(Fragment fragment)
@@ -114,8 +116,12 @@ private void checkCurrentUser(FirebaseUser user)
         startActivity(intent);
     }
     public void see_cart(View v){
-        Intent intent=new Intent(HomeActivity.this,Notifications.class);
+        Intent intent=new Intent(HomeActivity.this,CartActivity.class);
         startActivity(intent);
     }
 
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 }

@@ -10,27 +10,16 @@
         android:layout_marginLeft="15dp"
         android:layout_marginBottom="15dp"
         android:layout_marginRight="15dp"
-        android:id="@+id/selectedimagepost"/>
-    <EditText
-        android:id="@+id/addstatus"
+        android:src="@drawable/ic_android"
+        android:id="@+id/notifyimage"/>
+    <TextView
+        android:id="@+id/notify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:hint="Enter Status"
         android:layout_marginLeft="120dp"
         android:layout_marginTop="15dp"
-        android:layout_marginRight="15dp"
-        android:textColor="#000"
-        android:layout_marginBottom="15dp"
-        />
-    <EditText
-        android:id="@+id/addprice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:hint="Enter Price"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="150dp"
         android:layout_marginRight="15dp"
         android:textColor="#000"
         android:layout_marginBottom="15dp"

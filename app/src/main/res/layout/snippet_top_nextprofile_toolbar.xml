@@ -32,7 +32,6 @@
                     android:textSize="20sp"
                     android:textColor="#EC7063"
                     android:layout_marginStart="5dp"
-                    android:id="@+id/newpost"
                     android:layout_marginLeft="5dp" />
                 <TextView
                     android:layout_width="wrap_content"

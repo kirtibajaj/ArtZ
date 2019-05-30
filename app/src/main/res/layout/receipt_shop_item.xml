@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/grey_border_button">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/grey_border_button">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/receipt_item"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="bajaj.kirti"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#000"
+            android:layout_marginBottom="15dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:hint="status"
+            android:text="Check this Out:)"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#000"
+            android:layout_marginBottom="15dp"
+            />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Price Details"
+        android:layout_marginTop="150dp"
+        android:textColor="#EC7063"
+        android:textSize="30dp"
+        android:layout_marginRight="15dp"
+        android:padding="12dp"
+        android:background="@drawable/grey_border_button"
+        android:layout_marginLeft="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List Price"
+        android:textColor="#000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="220dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1199"
+        android:textColor="#000"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="220dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selling Price"
+        android:textColor="#000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="270dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="899"
+        android:textColor="#000"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="270dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Extra Discount"
+        android:textColor="#000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="320dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-50"
+        android:textColor="#000"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="320dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Special Price"
+        android:textColor="#000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="370dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="399"
+        android:textColor="#000"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="370dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shipping Fee"
+        android:textColor="#000"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="420dp"
+        android:textSize="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="40"
+        android:textColor="#000"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="420dp"
+        android:textSize="15dp"
+        android:background="@drawable/greyborderlist"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Amount : "
+        android:layout_marginTop="480dp"
+        android:textSize="30dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="889 "
+        android:layout_marginTop="480dp"
+        android:textSize="30dp"
+        android:layout_marginLeft="320dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue With process"
+        android:layout_marginTop="540dp"
+        android:id="@+id/button_item_shipped"/>
+</RelativeLayout>
